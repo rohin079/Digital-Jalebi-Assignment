@@ -24,7 +24,7 @@ const columns = [
     },
   },
   {
-    name: "username"
+    name: "username",
   },
   {
     name: "name",
@@ -79,7 +79,7 @@ function App() {
     elevation: 0,
     rowsPerPage: 5,
     rowsPerPageOptions: [5, 10, 15],
-    customToolbarSelect: () => {}, // Add customToolbarSelect property
+    customToolbarSelect: () => {},
   };
 
   const getMuiTheme = () =>
@@ -112,8 +112,8 @@ function App() {
   return (
     <div className="bg-slate-700 py-10 min-h-screen">
       <div className="w-10/12 max-w-10xl mx-auto">
-        <div className="mb-4 text-center text-white"> 
-          <h1 className="text-3xl font-bold mb-2">Digital Jalebi</h1> 
+        <div className="mb-4 text-center text-white">
+          <h1 className="text-3xl font-bold mb-2">Digital Jalebi</h1>
           <p className="text-lg">Rohin Mehrotra : 500095605</p>
         </div>
         <ThemeProvider theme={getMuiTheme()}>
@@ -122,8 +122,8 @@ function App() {
             data={users}
             columns={columns}
             options={options}
-            style={{ width: 'max-content' }}
-            className="fullWidthViewColumns" // Apply the custom class to the MUIDataTable component
+            style={{ width: "max-content" }}
+            className="fullWidthViewColumns" 
           />
         </ThemeProvider>
       </div>
