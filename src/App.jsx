@@ -79,7 +79,6 @@ function App() {
     elevation: 0,
     rowsPerPage: 5,
     rowsPerPageOptions: [5, 10, 15],
-    customToolbarSelect: () => {},
   };
 
   const getMuiTheme = () =>
@@ -101,8 +100,18 @@ function App() {
               padding: "10px 4px",
             },
             body: {
-              padding: "7px 15px",
+              padding: "3px 15px",
               color: "#E2E8F0",
+            },
+          },
+        },
+        MuiTablePagination: {
+          styleOverrides: {
+            toolbar: {
+              "& .MuiToolbar-root": {
+                display: "flex",
+                justifyContent: "space-between",
+              },
             },
           },
         },
@@ -122,8 +131,6 @@ function App() {
             data={users}
             columns={columns}
             options={options}
-            style={{ width: "max-content" }}
-            className="fullWidthViewColumns" 
           />
         </ThemeProvider>
       </div>
